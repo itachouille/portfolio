@@ -78,7 +78,7 @@ const Navbar = () => {
           </span>
         </Link>
       </div>
-      <div className="hidden md:flex gap-4 w-1/3">
+      <div className="hidden  gap-4 w-1/3 md:flex md:justify-end">
         <Link href="https://github.com/itachouille">
           <Image src="/github.png" alt="github logo" width={24} height={24} />
         </Link>
