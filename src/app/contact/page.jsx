@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import MotionWrapper from "@/motion/wrapper";
 
 const ContactPage = () => {
   const [success, setSuccess] = useState(false);
@@ -34,13 +35,8 @@ const ContactPage = () => {
   };
 
   return (
-    <motion.div
-      className="h-full"
-      initial={{ y: "-200vh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
-    >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+    <MotionWrapper>
+      <div className="h-full flex flex-col lg:flex-row container">
         {/* TEXT CONTAINER */}
         <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
           <div>
@@ -95,7 +91,7 @@ const ContactPage = () => {
           )}
         </form>
       </div>
-    </motion.div>
+    </MotionWrapper>
   );
 };
 
